@@ -1,12 +1,17 @@
+import Footer from '@/components/layout/Footer'
 import Banner from '@/components/ui/Banner'
-import Items from '@/components/ui/Items'
+import CategorySection from '@/components/ui/Category/CategorySection'
+import Items from '@/components/ui/Item/Items'
 import React from 'react'
 
 export default function Index() {
   return (
     <div>
       <Banner/>
-      <Items/>
+      <Items type='trending'/>
+      <CategorySection/>
+      <Items type='any'/>
+      <Footer/>
     </div>
   )
 }

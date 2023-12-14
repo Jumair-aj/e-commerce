@@ -10,7 +10,7 @@ import Script from 'next/script'
 export default function Header() {
   return (
     <div className='mt-4 '>
-      <nav className='mx-12 bg-[#074c50] flex px-10 py-4 rounded-2xl justify-between items-center'>
+      <nav className='mx-12 bg-primaryColor flex px-10 py-4 rounded-2xl justify-between items-center'>
         <div className="flex items-center gap-3">
           <RxHamburgerMenu size={20} color='white' />
           <p className='text-2xl text-white'>Header</p>

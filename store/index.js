@@ -1,16 +1,14 @@
-// "use client";
-// import { combineReducers, configureStore  } from "@reduxjs/toolkit";
-// import counterReducer from "./Features/Counter/counterSlice";
+import { combineReducers, configureStore  } from "@reduxjs/toolkit";
+import storeSliceReducer from "./storeSlice";
 
 
-// const rootReducer = combineReducers({
-//   counter: counterReducer,
-//   //add all your reducers here
-// },);
+const rootReducer = combineReducers({
+  store: storeSliceReducer,
+  //add all your reducers here
+},);
 
-// export const store = configureStore({
-//   reducer: rootReducer,
+export const store = configureStore({
+  reducer: rootReducer,
+ });
 
-//  });
-
-// export wrapper =  
+export default store;  

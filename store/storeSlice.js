@@ -1,15 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-
+allProducts:'',
+categories:'',
+prodcutsByCat:''
 }
 
 const storeSlice = createSlice({
-  name: second,
+  name: 'store',
   initialState,
-  reducers: {}
+  reducers: {
+    getAllProducts(state,action){
+      state.allProducts = action.payload.response
+    },
+    getAllCategories(state,action){
+      state.categories = action.payload.response
+    },
+    getProductsByCategory(state,action){
+      state.prodcutsByCat = action.payload.response
+    },
+  }
 });
 
-export const {} = storeSlice.actions
+export const storeActions = storeSlice.actions
 
 export default storeSlice.reducer
