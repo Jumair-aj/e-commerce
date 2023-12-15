@@ -10,7 +10,8 @@ export default function Index() {
       <Banner/>
       <Items type='trending'/>
       <CategorySection/>
-      <Items type='any'/>
+      <Items type='Jewelery'/>
+      <Items type='Electronics'/>
       <Footer/>
     </div>
   )

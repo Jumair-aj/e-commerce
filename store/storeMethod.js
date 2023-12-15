@@ -1,4 +1,4 @@
-import { ALL_CATEGORIES, ALL_PRODUCTS } from "@/config/api-urls"
+import { ALL_CATEGORIES, ALL_PRODUCTS, PRODUCTS_BY_CATEGORY } from "@/config/api-urls"
 import { CommonAPI } from "@/lib/CommonAPI"
 import { storeActions } from "./storeSlice"
 
@@ -31,10 +31,11 @@ export const getAllCategories = ()=>{
     }
 }
 
-export const getProductsByCategory = ({value})=>{
+export const getProductsByCategory = (value)=>{
     return async(dispatch)=>{
         try{
-            const response = await CommonAPI(ALL_CATEGORIES + value )
+            console.log(value)
+            const response = await CommonAPI(PRODUCTS_BY_CATEGORY + value.split(' ').join('') )
         dispatch(storeActions.getProductsByCategory({response:response}));
         return response
     }
