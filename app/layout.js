@@ -5,6 +5,7 @@ import { AOSInit } from '@/components/ui/aos'
 // import { Providers } from "./GlobalRedux/provider";
 import { store } from '@/store';
 import StoreProvider from './StoreProvider';
+import Footer from '@/components/layout/Footer';
 
 
 
@@ -15,8 +16,10 @@ export default function RootLayout({ children }) {
       <body className={'bg-[#f4f6f6]'}>
         <StoreProvider>
           <main>
-          <Header />
-          {children}
+            <Header />
+            {children}
+            <Footer />
+
           </main>
         </StoreProvider>
 

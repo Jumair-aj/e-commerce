@@ -1,4 +1,3 @@
-import Footer from '@/components/layout/Footer'
 import Banner from '@/components/ui/Banner'
 import CategorySection from '@/components/ui/Category/CategorySection'
 import Items from '@/components/ui/Item/Items'
@@ -14,7 +13,6 @@ export default function Index() {
       <Items type='Jewelery'/>
       <Items type='Electronics'/>
       <WhyUsSection/>
-      <Footer/>
     </div>
   )
 }
