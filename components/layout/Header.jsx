@@ -1,5 +1,6 @@
 import React from 'react'
-import { GiHamburgerMenu } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
+
 import { AiOutlineSearch } from 'react-icons/ai'
 import { PiLightningFill  } from 'react-icons/pi'
 import { BiCart } from 'react-icons/bi'
@@ -11,9 +12,9 @@ export default function Header() {
   return (
     <div className=' sticky px-12 pt-6 top-0 z-10 bg-[#f4f6f6] pb-2'>
       <nav className=' bg-primaryColor px-10 flex  py-4 rounded-2xl justify-between items-center w-full '>
-        <div className="flex items-center gap-3">
-          <GiHamburgerMenu  size={26} color='white' />
-          <Image src='/images/logo.png' width={100} height={100}/>
+        <div className="flex items-center gap-5">
+          <RxHamburgerMenu  size={26} color='white' />
+          <Image src='/images/logo.png' width={140} height={140}/>
         </div>
         <div className="flex items-center relative">
           <input type='text' placeholder='Search for Grocery, Vegetable, Store or Meat' className='px-5 rounded-full py-[0.7rem] w-[30rem] text-[0.9rem] text-black' />
