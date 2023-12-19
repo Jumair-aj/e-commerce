@@ -13,7 +13,7 @@ Banner() {
                 <button className='rounded-full bg-[#f9be41] px-5 py-3 font-semibold'>Learn More</button>
             </div>
         </div>
-        <div className=" h-full w-3/6 flex  justify-center absolute right-0  flex items-start pt-20" data-aos="zoom-in" data-aos-duration="200" data-aos-easing="ease-out-back" >
+        <div className=" h-full w-3/6 flex  justify-center absolute right-0  flex items-start pt-20" data-aos="zoom-in" data-aos-duration="500" data-aos-easing="ease-out-back" >
 <Image src={'/images/spices.png'} width={500} height={500} className=''/>
         </div>
         </div>

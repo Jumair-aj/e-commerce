@@ -7,8 +7,8 @@ export default function WhyUsCard({icon,title,desc}) {
         {icon}
         </div>
         <div className="">
-        <h5 className='text-2xl font-medium mb-1'>{title}</h5>
-        <p className='text-lg '>{desc}</p>
+        <h5 className='text-xl font-medium '>{title}</h5>
+        <p className='text-md '>{desc}</p>
         </div>
     </div>
   )
