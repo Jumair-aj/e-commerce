@@ -9,7 +9,7 @@
   /* border-top-right-radius: 30px 150px;  */
   /* border-bottom-right-radius: 30px 150px;  */
   /* animation: banner_anim 0.7s ease-in-out normal; */
-animation: banner 0.5s ease-in-out ;
+animation: banner 0.3s ease-in-out ;
 }
 
 @keyframes banner {
