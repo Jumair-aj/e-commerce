@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function Index() {
   return (
-    <div>
+    <div className={'bg-[#f4f6f6]'}>
       <Banner/>
       <Items type='trending'/>
       <CategorySection/>

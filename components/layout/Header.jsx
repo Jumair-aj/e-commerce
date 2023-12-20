@@ -14,7 +14,7 @@ export default function Header() {
       <nav className=' bg-primaryColor px-10 flex  py-4 rounded-2xl justify-between items-center w-full '>
         <div className="flex items-center gap-5">
           <RxHamburgerMenu  size={26} color='white' />
-          <Image src='/images/logo.png' width={140} height={140}/>
+          <Image src='/images/logo.png' width={140} height={18} className='flex'/>
         </div>
         <div className="flex items-center relative">
           <input type='text' placeholder='Search for Grocery, Vegetable, Store or Meat' className='px-5 rounded-full py-[0.7rem] w-[30rem] text-[0.9rem] text-black' />

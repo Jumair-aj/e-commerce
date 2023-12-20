@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <AOSInit />
-      <body className={'bg-[#f4f6f6]'}>
+      <body >
         <StoreProvider>
           <main>
             <Header />

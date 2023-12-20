@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-[#fef9ee] w-100">
       <section className="  py-16 justify-between  grid grid-cols-[3fr_1fr_1fr_1fr_1fr] gap-8	 text-black px-16">
       <div className="px-4">
-        <Image src={"/images/logoPrimary.png"} width={250} height={250} className="mb-4"/>
+        <Image src={"/images/logoPrimary.png"} width={250} height={22} className="mb-4"/>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
           quas nostrum, nihil quae sunt fugit.

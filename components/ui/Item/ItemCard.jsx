@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export default function ItemCard({title,price,image,category}) {
     return (
         <div className='p-2 '>
+            <Link href={title}>
         <div className='bg-white rounded-lg text-center mt-5 h-[450px] shadow-md relative'>
             <div className="flex flex-col  p-8  items-center justify-center">
                 <div className='flex h-[180px] justify-center items-center'>
@@ -17,6 +19,7 @@ export default function ItemCard({title,price,image,category}) {
                     Add to cart
                 </button>
         </div>
+        </Link>
         </div>
     )
 }
