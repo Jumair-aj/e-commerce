@@ -6,6 +6,9 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { BiCart } from "react-icons/bi";
 import { FaRegHeart } from "react-icons/fa6";
+import { GoVerified } from "react-icons/go";
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { RiFireFill } from "react-icons/ri";
 
 export default function ProductDetails() {
   const images = [
@@ -58,7 +61,7 @@ export default function ProductDetails() {
             showPlayButton={false}
           />
         </div>
-        <div className="flex flex-col px-4">
+        <div className="flex flex-col px-4 pe-16">
           <div className="w-80">
 
           <p className="text-xs text-gray-500 font-medium mb-1">Category</p>
@@ -70,20 +73,25 @@ export default function ProductDetails() {
           </div>
 
           <hr />
-          <div className=" my-6">
-            {/* img */}
-            <p>No Cost Emi for Bulk Purchase</p>
-            <p>Payments above $10</p>
+          <div className=" my-6 border w-96 px-6 flex items-center gap-3 rounded-xl py-2">
+            <LiaShippingFastSolid size={40} className="text-primaryColor"/>
+            <div className="">
+            <p className="text-xs text-gray-500" >No Cost Emi for Bulk </p>
+            <p className="text-xs text-primaryColor font-medium">Payments above $10</p>
+            </div>
           </div>
           <div className="flex gap-2 mb-4">
             <button className="bg-[#f1f3eb] rounded-full text-[#092c2e] font-semibold px-5 py-3 flex gap-2 text-[15px] items-center w-48 justify-center"><BiCart size={22} color='#092c2e'/> Add to bucket</button>
             <button className="bg-[#bcea71] rounded-full text-[#092c2e] font-semibold px-5 py-2 text-[15px] items-center w-48 justify-center">Buy now</button>
           </div>
-          <div className="">
-            <button className="flex items-center gap-1 uppercase text-primaryColor hover:no-underline underline"><FaRegHeart size={15}/><span className="font-semibold ">Add to wishlist</span></button>
+          <div className="flex justify-between">
+            <button className="flex items-center gap-1 uppercase text-primaryColor hover:no-underline underline mb-2"><FaRegHeart size={13}/><span className="font-semibold text-sm">Add to wishlist</span>
+            </button>
+          <p className="text-[#8f2024] flex gap-1 items-center font-semibold mb-3"><RiFireFill/>100 sold in last 24 hours</p>
+
           </div>
-          <p>Lorum Ipsum</p>
-          <p>Lorum Ipsum</p>
+          <p className="flex gap-1 items-center"><GoVerified color="green"/> 90% positive ratings from 100K+ customers</p>
+          <p className="flex gap-1 items-center"><GoVerified color="green"/> 100K+ recent orders from this brand</p>
         </div>
       </div>
     </div>
