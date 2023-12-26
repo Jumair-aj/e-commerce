@@ -9,8 +9,11 @@ import { FaRegHeart } from "react-icons/fa6";
 import { GoVerified } from "react-icons/go";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { RiFireFill } from "react-icons/ri";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/store/storeMethod";
 
 export default function ProductDetails() {
+  const dispatch= useDispatch()
   const images = [
     {
       original: "/images/logoPrimary.png",
@@ -45,6 +48,10 @@ export default function ProductDetails() {
       thumbnail: "/images/logoPrimary.png",
     },
   ];
+
+const handleCart=()=>{
+  dispatch(addToCart())
+}
 
   return (
     <div className="p-12">
@@ -81,7 +88,7 @@ export default function ProductDetails() {
             </div>
           </div>
           <div className="flex gap-2 mb-4">
-            <button className="bg-[#f1f3eb] rounded-full text-[#092c2e] font-semibold px-5 py-3 flex gap-2 text-[15px] items-center w-48 justify-center"><BiCart size={22} color='#092c2e'/> Add to bucket</button>
+            <button className="bg-[#f1f3eb] rounded-full text-[#092c2e] font-semibold px-5 py-3 flex gap-2 text-[15px] items-center w-48 justify-center"><BiCart size={22} color='#092c2e' onClick={handleCart}/> Add to Cart</button>
             <button className="bg-[#bcea71] rounded-full text-[#092c2e] font-semibold px-5 py-2 text-[15px] items-center w-48 justify-center">Buy now</button>
           </div>
           <div className="flex justify-between">
