@@ -5,11 +5,11 @@
 .banner_border_radius {
   width: 50%;
   border-top-right-radius: 300px 750px;
-    border-bottom-right-radius: 300px 844px;
+  border-bottom-right-radius: 300px 844px;
   /* border-top-right-radius: 30px 150px;  */
   /* border-bottom-right-radius: 30px 150px;  */
   /* animation: banner_anim 0.7s ease-in-out normal; */
-animation: banner 0.3s ease-in-out ;
+  animation: banner 0.3s ease-in-out;
 }
 
 @keyframes banner {
@@ -17,10 +17,11 @@ animation: banner 0.3s ease-in-out ;
 
     width: 100%;
 
-    border-top-right-radius: 0; 
-    border-bottom-right-radius: 0; 
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
-/* 50%{
+
+  /* 50%{
 
   width: 75%;
 } */
@@ -32,13 +33,13 @@ animation: banner 0.3s ease-in-out ;
 }
 
 
-.text-ellipse{
+.text-ellipse {
   width: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .image-gallery-slide-wrapper.image-gallery-thumbnails-bottom {
@@ -56,4 +57,11 @@ button.image-gallery-thumbnail {
   height: 85px;
   width: 100px;
   background: #f4f6f6;
+}
+
+input:checked[type=radio] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23f48d73'/%3e%3c/svg%3e");
+}
+input:checked[type=radio] ~ label{
+  @apply text-primaryColor
 }

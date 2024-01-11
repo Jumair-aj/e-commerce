@@ -24,12 +24,12 @@ export default function CategorySection() {
           <div className=""></div>
         </div>
       </div>
-      <div className=" my-6 flex gap-4">
-        {/* <CategorySlider> */}
+      <div className=" my-6  gap-4">
+        <CategorySlider>
           {categories.length && categories?.map((category, j) => (
             <CategoryBox key={j} category={category}/>
           ))}
-        {/* </CategorySlider> */}
+        </CategorySlider>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ import { getAllProducts, getProductsByCategory } from "@/store/storeMethod";
 
 export default function Items({ type }) {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.store.allProducts);
+  const allProducts = useSelector((state) => state.store.allProducts);
   const categories = useSelector((state) => state.store.categories);
 
   const [data, setData] = useState([]);
@@ -23,10 +23,10 @@ export default function Items({ type }) {
           setData(res);
           setData(prev => prev.concat(prev))
         });
-
     }
   }, [categories]);
 
+  
   return (
     <div className="mt-12 px-12 text-[#04302e] mb-12">
       <h3 className="text-3xl font-semibold">
@@ -37,21 +37,24 @@ export default function Items({ type }) {
         <div className=""></div>
       </div>
       <div className="">
+ 
         <ProductSlider>
           {type == "trending"
-            ? products.length &&
-              products?.map((product, j) => (
+            ? allProducts?.products?.length &&
+              allProducts?.products?.map((product, j) => (
                 <ItemCard
+                id={product.id}
                   key={j}
                   category={product.category}
-                  image={product.image}
+                  image={product.images}
                   price={product.price}
                   title={product.title}
                 />
               ))
             : data.length &&
-              data?.map((product, j) => (
-                <ItemCard
+            data?.map((product, j) => (
+              <ItemCard
+              id={product.id}
                   key={j}
                   category={product.category}
                   image={product.image}

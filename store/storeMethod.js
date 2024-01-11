@@ -1,4 +1,4 @@
-import { ALL_CATEGORIES, ALL_PRODUCTS, CART, PRODUCTS_BY_CATEGORY } from "@/config/api-urls"
+import { ADDTOCART, ALL_CATEGORIES, ALL_PRODUCTS, CART, PRODUCTS_BY_CATEGORY, VIEWCART } from "@/config/api-urls"
 import { CommonAPI } from "@/lib/CommonAPI"
 import { storeActions } from "./storeSlice"
 
@@ -46,17 +46,15 @@ export const getProductsByCategory = (value)=>{
     }
 }
 
-export const addToCart = (value)=>{
+export const getSingleProduct = (value) =>{
     return async(dispatch)=>{
         try{
-            console.log(value)
-            const response = await CommonAPI(CART ,value,'POST' )
-        dispatch(storeActions.addToCart({response:response}));
-        return response
-    }
+            const response = await CommonAPI(ALL_PRODUCTS + '/' + value)
+            dispatch(storeActions.getSingleProduct({response:response}));
+            return response;
+        }   
         catch(err){
-            console.log(err)
-            dispatch(storeActions.getProductsByCategory({response:err.response}));
+            dispatch(storeActions.getSingleProduct({response:err.response}));
         }
     }
 }

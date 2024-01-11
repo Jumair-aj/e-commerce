@@ -10,8 +10,8 @@ export default function Index() {
       <Banner/>
       <Items type='trending'/>
       <CategorySection/>
-      <Items type='Jewelery'/>
-      <Items type='Electronics'/>
+      {/* <Items type='Jewelery'/>
+      <Items type='Electronics'/> */}
       <WhyUsSection/>
     </div>
   )

@@ -1,10 +1,10 @@
 import ProductDetails from '@/components/ui/ProductDetails/ProductDetails'
 import React from 'react'
 
-export default function page() {
+export default function page({params}) {
   return (
     <div className={'bg-[#fff]'}>
-        <ProductDetails/>
+        <ProductDetails params={params}/>
     </div>
   )
 }

@@ -4,7 +4,9 @@ const initialState = {
 allProducts:'',
 categories:'',
 prodcutsByCat:'',
-cart:''
+cart:'',
+cartItems:'',
+product:''
 }
 
 const storeSlice = createSlice({
@@ -22,6 +24,12 @@ const storeSlice = createSlice({
     },
     addToCart(state,action){
       state.cart = action.payload.response
+    },
+    viewCart(state,action){
+      state.cartItems = action.payload.response
+    },
+    getSingleProduct(state,action){
+      state.product = action.payload.response
     },
   }
 });
