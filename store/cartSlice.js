@@ -1,23 +1,32 @@
+'use client'
+
 import { createSlice } from '@reduxjs/toolkit'
 import toast from 'react-hot-toast';
 
 const fetchFromLocalStorage = () => {
-    let cart = localStorage.getItem('cart');
-    if (cart) {
-        return JSON.parse(localStorage.getItem('cart'));
-    } else {
-        return [];
+    if (localStorage) {
+        let cart = localStorage?.getItem('cart');
+        if (cart) {
+            return JSON.parse(localStorage?.getItem('cart'));
+        } else {
+            return [];
+        }
+    }
+    else {
+        return []
     }
 }
 
 
 const storeInLocalStorage = (data) => {
-    localStorage.setItem('cart', JSON.stringify(data));
+    if (localStorage) {
+        localStorage?.setItem('cart', JSON.stringify(data));
+    }
 }
 
 const initialState = {
-    carts: fetchFromLocalStorage(),
-    itemsCount: fetchFromLocalStorage().length,
+    carts: typeof window !== 'undefined'? fetchFromLocalStorage() : [],
+    itemsCount: typeof window !== 'undefined' ? fetchFromLocalStorage().length : 0,
 }
 
 const cartSlice = createSlice({
@@ -58,7 +67,7 @@ const cartSlice = createSlice({
         toggleCartQty: (state, action) => {
             const tempCart = state.carts.map(item => {
                 if (item.id == action.payload.id) {
-                    
+
                 }
             }
             )
